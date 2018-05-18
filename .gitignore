@@ -14,6 +14,9 @@
 build/
 DerivedData/
 *.json
+*.plist
+*.json/
+*.plist/
 
 ## Various settings
 *.pbxuser
