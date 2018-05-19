@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LoginViewModel.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginController : UIViewController
+
+@property (strong, nonatomic) LoginViewModel *loginViewModel;
 
 @end
