@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		521DF6C520AE5ADB00F34575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521DF6C420AE5ADB00F34575 /* GoogleService-Info.plist */; };
-		521DF6C820AE5DC200F34575 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521DF6C720AE5DC200F34575 /* LoginViewController.m */; };
+		521DF6C820AE5DC200F34575 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521DF6C720AE5DC200F34575 /* LoginController.m */; };
 		5263C66220AE515A00145725 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66120AE515A00145725 /* AppDelegate.m */; };
 		5263C66820AE515A00145725 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66620AE515A00145725 /* Main.storyboard */; };
 		5263C66A20AE515A00145725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66920AE515A00145725 /* Assets.xcassets */; };
 		5263C66D20AE515A00145725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66B20AE515A00145725 /* LaunchScreen.storyboard */; };
 		5263C67020AE515A00145725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66F20AE515A00145725 /* main.m */; };
+		52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081BE20B0695C00EBA88D /* LoginViewModel.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		521DF6C420AE5ADB00F34575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		521DF6C620AE5DC200F34575 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		521DF6C720AE5DC200F34575 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		521DF6C620AE5DC200F34575 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		521DF6C720AE5DC200F34575 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
 		5263C65D20AE515A00145725 /* Radio-Objective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radio-Objective.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5263C66020AE515A00145725 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5263C66120AE515A00145725 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +30,8 @@
 		5263C66C20AE515A00145725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5263C66E20AE515A00145725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5263C66F20AE515A00145725 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52E081BD20B0695C00EBA88D /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		52E081BE20B0695C00EBA88D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		A4720EF0915830255FF1B74B /* Pods-Radio-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.release.xcconfig"; sourceTree = "<group>"; };
 		B146F432CA62846FF1571E14 /* Pods-Radio-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.debug.xcconfig"; sourceTree = "<group>"; };
 		F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Radio-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +79,9 @@
 		5263C65F20AE515A00145725 /* Radio-Objective */ = {
 			isa = PBXGroup;
 			children = (
+				52E081C020B069CB00EBA88D /* Views */,
+				52E081BC20B0694900EBA88D /* ViewModels */,
+				52E081B820B0672500EBA88D /* Models */,
 				521DF6C420AE5ADB00F34575 /* GoogleService-Info.plist */,
 				5263C66020AE515A00145725 /* AppDelegate.h */,
 				5263C66120AE515A00145725 /* AppDelegate.m */,
@@ -84,10 +90,41 @@
 				5263C66B20AE515A00145725 /* LaunchScreen.storyboard */,
 				5263C66E20AE515A00145725 /* Info.plist */,
 				5263C66F20AE515A00145725 /* main.m */,
-				521DF6C620AE5DC200F34575 /* LoginViewController.h */,
-				521DF6C720AE5DC200F34575 /* LoginViewController.m */,
 			);
 			path = "Radio-Objective";
+			sourceTree = "<group>";
+		};
+		52E081B620B066F000EBA88D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				521DF6C620AE5DC200F34575 /* LoginController.h */,
+				521DF6C720AE5DC200F34575 /* LoginController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52E081B820B0672500EBA88D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E081BC20B0694900EBA88D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52E081BD20B0695C00EBA88D /* LoginViewModel.h */,
+				52E081BE20B0695C00EBA88D /* LoginViewModel.m */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52E081C020B069CB00EBA88D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E081B620B066F000EBA88D /* Controllers */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E6886714E1BE8B628229DAA6 /* Frameworks */ = {
@@ -191,9 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,
-				521DF6C820AE5DC200F34575 /* LoginViewController.m in Sources */,
+				521DF6C820AE5DC200F34575 /* LoginController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

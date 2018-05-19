@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Login Controller-->
         <scene sceneID="3kg-eP-hH8">
             <objects>
-                <viewController id="ads-6b-nME" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController id="ads-6b-nME" customClass="LoginController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w0R-IW-VKu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,6 +154,7 @@
                         <outlet property="edLogin" destination="gUm-vA-9yH" id="QOX-ob-K67"/>
                         <outlet property="edPassword" destination="pll-T2-Olr" id="scd-uG-Ugz"/>
                         <outlet property="lblConfirmPassword" destination="2dI-EE-EI5" id="Y2E-KZ-YaB"/>
+                        <outlet property="lblHintMessage" destination="r2L-Zx-ys6" id="bfd-6S-eNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97w-Py-hJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
