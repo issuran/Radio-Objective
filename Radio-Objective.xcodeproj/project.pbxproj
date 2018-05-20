@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52013E8A20B1C457009FD46C /* MainScreenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52013E8920B1C457009FD46C /* MainScreenViewModel.m */; };
+		52013E8D20B1D6BE009FD46C /* MainScreenTVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52013E8C20B1D6BE009FD46C /* MainScreenTVCell.m */; };
 		521DF6C520AE5ADB00F34575 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 521DF6C420AE5ADB00F34575 /* GoogleService-Info.plist */; };
 		521DF6C820AE5DC200F34575 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521DF6C720AE5DC200F34575 /* LoginController.m */; };
 		5263C66220AE515A00145725 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66120AE515A00145725 /* AppDelegate.m */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52013E8820B1C457009FD46C /* MainScreenViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewModel.h; sourceTree = "<group>"; };
+		52013E8920B1C457009FD46C /* MainScreenViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewModel.m; sourceTree = "<group>"; };
+		52013E8B20B1D6BE009FD46C /* MainScreenTVCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenTVCell.h; sourceTree = "<group>"; };
+		52013E8C20B1D6BE009FD46C /* MainScreenTVCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenTVCell.m; sourceTree = "<group>"; };
 		521DF6C420AE5ADB00F34575 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		521DF6C620AE5DC200F34575 /* LoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		521DF6C720AE5DC200F34575 /* LoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 				521DF6C720AE5DC200F34575 /* LoginController.m */,
 				52E081C820B0E09C00EBA88D /* MainScreenTVController.h */,
 				52E081C920B0E09C00EBA88D /* MainScreenTVController.m */,
+				52013E8B20B1D6BE009FD46C /* MainScreenTVCell.h */,
+				52013E8C20B1D6BE009FD46C /* MainScreenTVCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -120,6 +128,8 @@
 			children = (
 				52E081BD20B0695C00EBA88D /* LoginViewModel.h */,
 				52E081BE20B0695C00EBA88D /* LoginViewModel.m */,
+				52013E8820B1C457009FD46C /* MainScreenViewModel.h */,
+				52013E8920B1C457009FD46C /* MainScreenViewModel.m */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -238,6 +248,8 @@
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,
 				521DF6C820AE5DC200F34575 /* LoginController.m in Sources */,
+				52013E8A20B1C457009FD46C /* MainScreenViewModel.m in Sources */,
+				52013E8D20B1D6BE009FD46C /* MainScreenTVCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,13 +9,14 @@
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
-
 @end
 
 @implementation MainScreenTVController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _mainScreenViewModel = [MainScreenViewModel new];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -24,32 +25,32 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return _mainScreenViewModel.music.count;
 }
 
-/*
+// Add the items
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
+    
+    MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
+    cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
+    cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
+    
     
     // Configure the cell...
+    //cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
