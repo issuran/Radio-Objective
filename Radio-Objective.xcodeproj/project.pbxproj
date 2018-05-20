@@ -15,6 +15,7 @@
 		5263C66D20AE515A00145725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66B20AE515A00145725 /* LaunchScreen.storyboard */; };
 		5263C67020AE515A00145725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66F20AE515A00145725 /* main.m */; };
 		52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081BE20B0695C00EBA88D /* LoginViewModel.m */; };
+		52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081C920B0E09C00EBA88D /* MainScreenTVController.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		5263C66F20AE515A00145725 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		52E081BD20B0695C00EBA88D /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		52E081BE20B0695C00EBA88D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		52E081C820B0E09C00EBA88D /* MainScreenTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenTVController.h; sourceTree = "<group>"; };
+		52E081C920B0E09C00EBA88D /* MainScreenTVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenTVController.m; sourceTree = "<group>"; };
 		A4720EF0915830255FF1B74B /* Pods-Radio-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.release.xcconfig"; sourceTree = "<group>"; };
 		B146F432CA62846FF1571E14 /* Pods-Radio-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.debug.xcconfig"; sourceTree = "<group>"; };
 		F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Radio-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +102,8 @@
 			children = (
 				521DF6C620AE5DC200F34575 /* LoginController.h */,
 				521DF6C720AE5DC200F34575 /* LoginController.m */,
+				52E081C820B0E09C00EBA88D /* MainScreenTVController.h */,
+				52E081C920B0E09C00EBA88D /* MainScreenTVController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */,
 				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,

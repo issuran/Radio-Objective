@@ -27,9 +27,8 @@
 - (void) signUserIn: (BOOL) isSuccess;
 - (void) signUserUp: (BOOL) isSuccess;
 
-- (void) signIn : (NSString *)username forPassword:(NSString *)password;
-- (void) signUp : (NSString *)username forPassword:(NSString *)password;
+- (BOOL) signIn : (NSString *)username forPassword:(NSString *)password;
+- (BOOL) signUp : (NSString *)username forPassword:(NSString *)password;
 
 - (void) swapOptions;
-
 @end
