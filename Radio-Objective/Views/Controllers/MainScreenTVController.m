@@ -9,7 +9,7 @@
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
-
+@property (strong, nonatomic) NSArray *music;
 @end
 
 @implementation MainScreenTVController
@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _music = @[@"iPhone", @"Android", @"Black Berry", @"Windows Phone"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -24,32 +25,27 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return _music.count;
 }
 
-/*
+// Add the items
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
     
     // Configure the cell...
+    cell.textLabel.text = _music[indexPath.row];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
