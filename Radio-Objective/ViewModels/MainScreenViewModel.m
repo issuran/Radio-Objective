@@ -20,7 +20,8 @@
 
 // As Views holds reference to the ViewModel, so makes sense initialize our View, given a ViewModel
 - (void) initialize {
-    self.music =  @[@"iPhone", @"Android", @"Black Berry", @"Windows Phone"];
+    self.music =  @[@"Starboy", @"One Kiss", @"Habits", @"The Less I Know The Better"];
+    self.artist =  @[@"The Weeknd", @"Dua Lipa", @"Tove Lo", @"Tame Impala"];
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
-
 @end
 
 @implementation MainScreenTVController
@@ -40,10 +39,15 @@
 
 // Add the items
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
+    
+    MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
+    cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
+    cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
+    
     
     // Configure the cell...
-    cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
+    //cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
     
     return cell;
 }

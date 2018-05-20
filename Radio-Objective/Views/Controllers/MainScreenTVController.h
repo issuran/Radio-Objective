@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MainScreenViewModel.h"
+#import "MainScreenTVCell.h"
 
 @interface MainScreenTVController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
