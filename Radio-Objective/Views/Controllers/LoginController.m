@@ -23,6 +23,10 @@
 
 @implementation LoginController
 
+typedef enum{
+    login
+} Route;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -64,13 +68,16 @@
     if(_loginViewModel.isSignIn) {
         
         // Sign in user
-        [_loginViewModel signIn:[self.edLogin text] forPassword:[self.edPassword text]];
+        if ([_loginViewModel signIn:[self.edLogin text] forPassword:[self.edPassword text]]) {
+            [self performSegueWithIdentifier:@"loginSegue" sender:sender];
+        }
         
     } else {
      
         // Create user
-        [_loginViewModel signUp:[self.edLogin text] forPassword:[self.edPassword text]];
-        
+        if ([_loginViewModel signUp:[self.edLogin text] forPassword:[self.edPassword text]]) {
+            [self performSegueWithIdentifier:@"loginSegue" sender:sender];
+        }
     }
 }
 
@@ -94,6 +101,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
 }
 
 

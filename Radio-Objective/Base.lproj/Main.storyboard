@@ -155,6 +155,7 @@
                         <outlet property="edPassword" destination="pll-T2-Olr" id="scd-uG-Ugz"/>
                         <outlet property="lblConfirmPassword" destination="2dI-EE-EI5" id="Y2E-KZ-YaB"/>
                         <outlet property="lblHintMessage" destination="r2L-Zx-ys6" id="bfd-6S-eNH"/>
+                        <segue destination="bTW-hY-tpt" kind="show" identifier="loginSegue" id="H5Q-Vy-akU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97w-Py-hJX" userLabel="First Responder" sceneMemberID="firstResponder"/>

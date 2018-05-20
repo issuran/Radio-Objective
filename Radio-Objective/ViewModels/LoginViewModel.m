@@ -55,10 +55,12 @@
     }
 }
 
-- (void) signIn : (NSString *)username forPassword:(NSString *)password{
+- (BOOL) signIn : (NSString *)username forPassword:(NSString *)password{
     
     self.username = username;
     self.password = password;
+    
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     
     [[FIRAuth auth] signInWithEmail: self.username
                            password: self.password
@@ -66,18 +68,28 @@
                                if(error == nil){
                                    [self signUserIn: YES];
                                    NSLog(@"Sign In - Sucess");
+                                   dispatch_semaphore_signal(sem);
                                } else{
                                    NSLog(@"Error: %@", error.localizedDescription);
                                    [self signUserIn: NO];
                                    NSLog(@"Sign In - Failed");
+                                   dispatch_semaphore_signal(sem);
                                }
                            }];
+    
+    while (dispatch_semaphore_wait(sem, DISPATCH_TIME_NOW)) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:2]];
+    }
+    
+    return self.isUserLogged;
 }
 
-- (void) signUp : (NSString *)username forPassword:(NSString *)password;{
+- (BOOL) signUp : (NSString *)username forPassword:(NSString *)password;{
     
     self.username = username;
     self.password = password;
+    
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     
     [[FIRAuth auth] createUserWithEmail: username
                                password: password
@@ -85,12 +97,20 @@
                                    if(error == nil){
                                        [self signUserUp: YES];
                                        NSLog(@"Sign Up - Sucess");
+                                       dispatch_semaphore_signal(sem);
                                    } else{
                                        NSLog(@"Error: %@", error.localizedDescription);
                                        [self signUserUp: NO];
                                        NSLog(@"Sign Up - Failed");
+                                       dispatch_semaphore_signal(sem);
                                    }
                                }];
+    
+    while (dispatch_semaphore_wait(sem, DISPATCH_TIME_NOW)) {
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:2]];
+    }
+    
+    return self.isUserCreated;
 }
 
 - (void) signUserIn: (BOOL) isSuccess{
