@@ -9,7 +9,7 @@
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
-@property (strong, nonatomic) NSArray *music;
+
 @end
 
 @implementation MainScreenTVController
@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _music = @[@"iPhone", @"Android", @"Black Berry", @"Windows Phone"];
+    _mainScreenViewModel = [MainScreenViewModel new];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -34,7 +35,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return _music.count;
+    return _mainScreenViewModel.music.count;
 }
 
 // Add the items
@@ -42,7 +43,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = _music[indexPath.row];
+    cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
     
     return cell;
 }

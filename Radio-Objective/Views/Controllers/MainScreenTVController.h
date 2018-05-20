@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainScreenViewModel.h"
 
 @interface MainScreenTVController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) MainScreenViewModel *mainScreenViewModel;
 
 @end
