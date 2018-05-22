@@ -39,7 +39,6 @@
 
 // Add the items
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable" forIndexPath:indexPath];
     
     MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
     cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];

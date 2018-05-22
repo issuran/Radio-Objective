@@ -36,6 +36,8 @@
     self.btLoginText = @"Logar";
     self.btRegisterText = @"Registrar";
     self.lblHintText = @"Talvez queira criar uma conta";
+    
+    self.isUserLogged = [FIRAuth auth].currentUser;
 }
 
 - (void) swapOptions {

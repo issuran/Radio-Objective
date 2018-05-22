@@ -10,5 +10,5 @@ target 'Radio-Objective' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-
+pod 'AFNetworking', '~> 3.0'
 end

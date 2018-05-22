@@ -34,6 +34,10 @@ typedef enum{
     _loginViewModel = [LoginViewModel new];
     
     [self bindViewModel];
+    
+    if(_loginViewModel.isUserLogged){
+        [self performSegueWithIdentifier:@"loginSegue" sender:self];
+    }
 }
 
 - (void) bindViewModel{
