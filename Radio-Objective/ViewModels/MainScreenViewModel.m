@@ -75,6 +75,7 @@
             
             [self.music addObject:musicModel.trackName];
             [self.artist addObject:musicModel.artist.name];
+            [self.image addObject:musicModel.image.text];
             
         }
         

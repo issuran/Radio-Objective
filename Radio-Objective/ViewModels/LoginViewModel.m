@@ -8,7 +8,7 @@
 
 #import "LoginViewModel.h"
 #import "LoginController.h"
-@import FirebaseAuth;
+@import Firebase;
 
 @interface LoginViewModel ()
 
@@ -66,18 +66,18 @@
     
     [[FIRAuth auth] signInWithEmail: self.username
                            password: self.password
-                           completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
-                               if(error == nil){
-                                   [self signUserIn: YES];
-                                   NSLog(@"Sign In - Sucess");
-                                   dispatch_semaphore_signal(sem);
-                               } else{
-                                   NSLog(@"Error: %@", error.localizedDescription);
-                                   [self signUserIn: NO];
-                                   NSLog(@"Sign In - Failed");
-                                   dispatch_semaphore_signal(sem);
-                               }
-                           }];
+                         completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
+                             if(error == nil){
+                                 [self signUserIn: YES];
+                                 NSLog(@"Sign In - Sucess");
+                                 dispatch_semaphore_signal(sem);
+                             } else{
+                                 NSLog(@"Error: %@", error.localizedDescription);
+                                 [self signUserIn: NO];
+                                 NSLog(@"Sign In - Failed");
+                                 dispatch_semaphore_signal(sem);
+                             }
+                         }];
     
     while (dispatch_semaphore_wait(sem, DISPATCH_TIME_NOW)) {
         [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:2]];
@@ -95,7 +95,7 @@
     
     [[FIRAuth auth] createUserWithEmail: username
                                password: password
-                               completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
+                               completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
                                    if(error == nil){
                                        [self signUserUp: YES];
                                        NSLog(@"Sign Up - Sucess");

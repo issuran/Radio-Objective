@@ -7,7 +7,6 @@
 //
 
 #import "LoginController.h"
-@import FirebaseAuth;
 
 @interface LoginController ()
 

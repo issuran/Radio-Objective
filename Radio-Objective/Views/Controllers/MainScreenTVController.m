@@ -56,6 +56,17 @@
     cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
     cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
     
+//    NSString *stringUrl = _mainScreenViewModel.image[indexPath.row];
+//    
+//    [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+//    
+//    NSURLSession *session = [NSURLSession sharedSession];
+//    
+//    [[session dataTaskWithURL:[NSURL URLWithString:stringUrl] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        cell.imgView.image = [[UIImage alloc] initWithData:data];
+//    }]resume];
+    
+    
     
     // Configure the cell...
     //cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
