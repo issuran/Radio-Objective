@@ -16,5 +16,5 @@
 @property (retain, nonatomic) NSString *text;
 @property (retain, nonatomic) NSString *size;
 
--(id) initWithDictionary:(NSDictionary *)imagesDictionary;
+-(void) initWithDictionary:(NSDictionary *)imagesDictionary;
 @end

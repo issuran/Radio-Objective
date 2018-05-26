@@ -18,10 +18,8 @@
 		5263C67020AE515A00145725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66F20AE515A00145725 /* main.m */; };
 		52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081BE20B0695C00EBA88D /* LoginViewModel.m */; };
 		52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081C920B0E09C00EBA88D /* MainScreenTVController.m */; };
-		52EDA35020B2099B002F2566 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA34F20B2099B002F2566 /* APIService.m */; };
 		52EDA35320B20C8D002F2566 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35220B20C8D002F2566 /* MusicModel.m */; };
 		52EDA35720B2114E002F2566 /* TracksModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35620B2114E002F2566 /* TracksModel.m */; };
-		52EDA35A20B2125B002F2566 /* TrackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35920B2125B002F2566 /* TrackModel.m */; };
 		52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35C20B212B8002F2566 /* ImageModel.m */; };
 		52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35F20B213CF002F2566 /* ArtistModel.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
@@ -47,14 +45,10 @@
 		52E081BE20B0695C00EBA88D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		52E081C820B0E09C00EBA88D /* MainScreenTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenTVController.h; sourceTree = "<group>"; };
 		52E081C920B0E09C00EBA88D /* MainScreenTVController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenTVController.m; sourceTree = "<group>"; };
-		52EDA34E20B2099B002F2566 /* APIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
-		52EDA34F20B2099B002F2566 /* APIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
 		52EDA35220B20C8D002F2566 /* MusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
 		52EDA35420B2106E002F2566 /* MusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
 		52EDA35520B2114E002F2566 /* TracksModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TracksModel.h; sourceTree = "<group>"; };
 		52EDA35620B2114E002F2566 /* TracksModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TracksModel.m; sourceTree = "<group>"; };
-		52EDA35820B2125B002F2566 /* TrackModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModel.h; sourceTree = "<group>"; };
-		52EDA35920B2125B002F2566 /* TrackModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModel.m; sourceTree = "<group>"; };
 		52EDA35B20B212B8002F2566 /* ImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		52EDA35C20B212B8002F2566 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		52EDA35E20B213CF002F2566 /* ArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistModel.h; sourceTree = "<group>"; };
@@ -106,7 +100,6 @@
 		5263C65F20AE515A00145725 /* Radio-Objective */ = {
 			isa = PBXGroup;
 			children = (
-				52EDA34D20B208D0002F2566 /* Networking */,
 				52E081C020B069CB00EBA88D /* Views */,
 				52E081BC20B0694900EBA88D /* ViewModels */,
 				52E081B820B0672500EBA88D /* Models */,
@@ -142,8 +135,6 @@
 				52EDA35420B2106E002F2566 /* MusicModel.h */,
 				52EDA35520B2114E002F2566 /* TracksModel.h */,
 				52EDA35620B2114E002F2566 /* TracksModel.m */,
-				52EDA35820B2125B002F2566 /* TrackModel.h */,
-				52EDA35920B2125B002F2566 /* TrackModel.m */,
 				52EDA35B20B212B8002F2566 /* ImageModel.h */,
 				52EDA35C20B212B8002F2566 /* ImageModel.m */,
 				52EDA35E20B213CF002F2566 /* ArtistModel.h */,
@@ -169,15 +160,6 @@
 				52E081B620B066F000EBA88D /* Controllers */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		52EDA34D20B208D0002F2566 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				52EDA34E20B2099B002F2566 /* APIService.h */,
-				52EDA34F20B2099B002F2566 /* APIService.m */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		E6886714E1BE8B628229DAA6 /* Frameworks */ = {
@@ -284,9 +266,7 @@
 				52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */,
 				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
 				52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */,
-				52EDA35020B2099B002F2566 /* APIService.m in Sources */,
 				52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */,
-				52EDA35A20B2125B002F2566 /* TrackModel.m in Sources */,
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,
 				521DF6C820AE5DC200F34575 /* LoginController.m in Sources */,

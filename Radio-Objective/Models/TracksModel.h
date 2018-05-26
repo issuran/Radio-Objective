@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TrackModel.h"
 
 @interface TracksModel : NSObject
 {
-    TrackModel *track;
+    NSArray *track;
+    NSDictionary *tracksDic;
+    NSArray *listTracks;
 }
-@property (retain, nonatomic) TrackModel *track;
+@property (retain, nonatomic) NSArray *trackArray;
+@property (retain, nonatomic) NSDictionary *tracksDic;
+@property (retain, nonatomic) NSArray *listTracks;
 
 -(id) initWithDictionary:(NSDictionary *)trackDictionary;
 @end

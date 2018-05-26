@@ -11,13 +11,13 @@
 @implementation ArtistModel
 @synthesize name, mbid, url;
 
--(id)initWithDictionary:(NSDictionary *)artistsDictionary{
-    self = [super init];
+-(void)initWithDictionary:(NSDictionary *)artistsDictionary{
+    //self = [super init];
     if (self != nil) {
-        self.name=[artistsDictionary valueForKey:@"name"];
-        self.mbid=[artistsDictionary valueForKey:@"mbid"];
-        self.url=[artistsDictionary valueForKey:@"url"];
+        self.name=[artistsDictionary objectForKey:@"name"];
+        self.mbid=[artistsDictionary objectForKey:@"mbid"];
+        self.url=[artistsDictionary objectForKey:@"url"];
     }
-    return self;
+    //return self;
 }
 @end

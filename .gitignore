@@ -17,6 +17,8 @@ DerivedData/
 *.plist
 *.json/
 *.plist/
+Radio-Objective/*.plist/
+Radio-Objective/*.plist
 
 ## Various settings
 *.pbxuser

@@ -18,5 +18,5 @@
 @property (retain, nonatomic) NSString *mbid;
 @property (retain, nonatomic) NSString *url;
 
--(id) initWithDictionary:(NSDictionary *)artistsDictionary;
+-(void) initWithDictionary:(NSDictionary *)artistsDictionary;
 @end

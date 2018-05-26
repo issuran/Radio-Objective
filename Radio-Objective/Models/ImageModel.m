@@ -11,13 +11,13 @@
 @implementation ImageModel
 @synthesize text, size;
 
--(id)initWithDictionary:(NSDictionary *)imagesDictionary{
-    self = [super init];
+-(void)initWithDictionary:(NSDictionary *)imagesDictionary{
+    //self = [super init];
     if (self != nil) {
         self.text=[imagesDictionary valueForKey:@"#text"];
         self.size=[imagesDictionary valueForKey:@"size"];
     }
-    return self;
+    //return self;
 }
 
 @end
