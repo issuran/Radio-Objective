@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TracksModel.h"
 
 @interface MainScreenViewModel : NSObject
 
-@property (strong, nonatomic) NSArray *music;
-@property (strong, nonatomic) NSArray *artist;
+@property (strong, nonatomic) NSMutableArray *music;
+@property (strong, nonatomic) NSMutableArray *artist;
+@property (strong, nonatomic) TracksModel *tracksModel;
+@property (strong, nonatomic) NSMutableArray *musicArray;
+
+- (void) populateMusicAndArtistsArray;
 
 @end

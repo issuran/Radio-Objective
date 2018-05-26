@@ -28,6 +28,10 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     
+    _music = [[NSMutableArray alloc]init];
+    _artist = [[NSMutableArray alloc]init];
+    _musicArray = [[NSMutableArray alloc]init];
+    
     NSString *baseUrl = @"http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=cher&api_key=4335b079b4b2cc28a30a9395a8543f58&format=json";
     
     [params setObject:@"method" forKey:@"chart.gettoptracks"];
@@ -41,33 +45,53 @@
     [manager GET:baseUrl parameters:nil progress:nil
         success:^(NSURLSessionTask *task, id responseObject)
         {
-            TracksModel *tracksModel = [TracksModel new];
-            tracksModel = [tracksModel initWithDictionary:responseObject];
-            NSLog(@"result: %@", tracksModel.track);
-            NSLog(@"result");
-            
             NSDictionary *result = (NSDictionary *) responseObject;
-            NSArray *tracks = [result objectForKey:@"tracks"];
             
-            NSDictionary *track = (NSDictionary *) tracks;
+            TracksModel *tracksModel = [TracksModel new];
+            self.tracksModel = [tracksModel initWithDictionary:result];
             
-            NSArray *listTracks = [track objectForKey:@"track"];
+            [self populateMusicAndArtistsArray];
             
-            NSObject *music = [listTracks objectAtIndex:0];
-            
-            MusicModel *musicModel = [MusicModel new];
-            
-            musicModel.trackName = [music valueForKey:@"name"];
-            musicModel.image = [music valueForKey:@"image"];
-            musicModel.artist = [music valueForKey:@"artist"];
         }
         failure:^(NSURLSessionTask *task, NSError *error)
         {
             NSLog(@"Error: %@", error.localizedFailureReason);
         }];
     
-    self.music =  @[@"Starboy", @"One Kiss", @"Habits", @"The Less I Know The Better"];
-    self.artist =  @[@"The Weeknd", @"Dua Lipa", @"Tove Lo", @"Tame Impala"];
+    [self populateMusicAndArtistsArray];
+}
+
+- (void) populateMusicAndArtistsArray {
+    
+    if(self.tracksModel != nil){
+        for (int i = 0; i < 20; i++) {
+            NSDictionary *music = [self.tracksModel.listTracks objectAtIndex:i];
+            
+            MusicModel *musicModel = [MusicModel new];
+            
+            musicModel = [musicModel initWithDictionary:music];
+            
+            [self.musicArray addObject:musicModel];
+            
+            [self.music addObject:musicModel.trackName];
+            [self.artist addObject:musicModel.artist.name];
+            
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateFromServer" object:nil];
+        
+    } else{
+        [_music addObject:@"Starboy"];
+        [_music addObject:@"One Kiss"];
+        [_music addObject:@"Habits"];
+        [_music addObject:@"The Less I Know The Better"];
+        
+        [_artist addObject:@"The Weeknd"];
+        [_artist addObject:@"Dua Lipa"];
+        [_artist addObject:@"Tove Lo"];
+        [_artist addObject:@"Tame Impala"];
+    }
+    
 }
 
 @end

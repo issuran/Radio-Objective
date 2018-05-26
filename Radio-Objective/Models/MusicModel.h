@@ -12,13 +12,21 @@
 
 @interface MusicModel : NSObject
 {
-    NSString *trackName;
-    ImageModel *image;
-    ArtistModel *artist;
+    @public NSString *trackName;
+    @public ImageModel *image;
+    @public ArtistModel *artist;
+    
+    @private NSDictionary *artistDict;
+    @private NSDictionary *imageDict;
+    @private NSArray *imageArray;
 }
+
 @property (retain, nonatomic) NSString *trackName;
 @property (retain, nonatomic) ImageModel *image;
 @property (retain, nonatomic) ArtistModel *artist;
+@property (retain, nonatomic) NSDictionary *artistDict;
+@property (retain, nonatomic) NSDictionary *imageDict;
+@property (retain, nonatomic) NSArray *imageArray;
 
 -(id) initWithDictionary:(NSDictionary *)musicDictionary;
 @end
