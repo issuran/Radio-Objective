@@ -5,7 +5,7 @@
 //  Created by Tiago Oliveira on 19/05/18.
 //  Copyright © 2018 Optimize 7. All rights reserved.
 //
-
+#import "MusicModel.h"
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
@@ -45,21 +45,30 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return _mainScreenViewModel.music.count;
+    if(_mainScreenViewModel.musicArray.count > 0){
+        return _mainScreenViewModel.musicArray.count;
+    }
+    return 0;
 }
 
 // Add the items
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
-    cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
-    cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
     
-    
-    // Configure the cell...
-    //cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
-    
+    if(_mainScreenViewModel.musicArray.count > 0){
+        MusicModel *musicSelected = _mainScreenViewModel.musicArray[indexPath.row];
+        
+        cell.lblTitle.text = musicSelected.artist.name;
+        
+        cell.lblDetail.text = musicSelected.trackName;
+        
+        NSString *stringUrl = musicSelected.image.text;
+        
+        [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        
+        [cell.imgView sd_setImageWithURL:[NSURL URLWithString:stringUrl]  placeholderImage:[UIImage imageNamed:@"image_small"]];
+    }
     return cell;
 }
 

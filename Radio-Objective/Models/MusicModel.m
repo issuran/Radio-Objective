@@ -10,7 +10,7 @@
 #import "MusicModel.h"
 
 @implementation MusicModel
-@synthesize artist, image, trackName, artistDict;
+@synthesize artist, image, trackName, artistDict, imageArray, imageDict;
 
 -(id)initWithDictionary:(NSDictionary *)musicDictionary{
     self = [super init];

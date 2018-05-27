@@ -7,7 +7,6 @@
 //
 
 #import "LoginController.h"
-@import FirebaseAuth;
 
 @interface LoginController ()
 
@@ -35,9 +34,14 @@ typedef enum{
     
     [self bindViewModel];
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    
     if(_loginViewModel.isUserLogged){
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
     }
+    
 }
 
 - (void) bindViewModel{

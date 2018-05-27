@@ -11,8 +11,6 @@
 
 @interface MainScreenViewModel : NSObject
 
-@property (strong, nonatomic) NSMutableArray *music;
-@property (strong, nonatomic) NSMutableArray *artist;
 @property (strong, nonatomic) TracksModel *tracksModel;
 @property (strong, nonatomic) NSMutableArray *musicArray;
 
