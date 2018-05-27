@@ -5,7 +5,7 @@
 //  Created by Tiago Oliveira on 19/05/18.
 //  Copyright © 2018 Optimize 7. All rights reserved.
 //
-
+#import "MusicModel.h"
 #import "MainScreenTVController.h"
 
 @interface MainScreenTVController ()
@@ -53,24 +53,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
-    cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
-    cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
     
-//    NSString *stringUrl = _mainScreenViewModel.image[indexPath.row];
-//    
-//    [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
-//    
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    
-//    [[session dataTaskWithURL:[NSURL URLWithString:stringUrl] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-//        cell.imgView.image = [[UIImage alloc] initWithData:data];
-//    }]resume];
+    if(_mainScreenViewModel.music.count > 0){
+        
     
-    
-    
-    // Configure the cell...
-    //cell.textLabel.text = _mainScreenViewModel.music[indexPath.row];
-    
+        cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
+        cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
+        NSString *stringUrl = _mainScreenViewModel.image[indexPath.row];
+
+        [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+
+        [cell.imgView sd_setImageWithURL:[NSURL URLWithString:stringUrl]  placeholderImage:[UIImage imageNamed:@"image_small"]];
+    }
     return cell;
 }
 

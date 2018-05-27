@@ -11,5 +11,6 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'AFNetworking', '~> 3.0'
+pod 'SDWebImage', '~> 4.0'
 
 end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MainScreenViewModel.h"
 #import "MainScreenTVCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainScreenTVController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 

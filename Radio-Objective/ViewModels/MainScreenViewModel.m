@@ -30,6 +30,7 @@
     
     _music = [[NSMutableArray alloc]init];
     _artist = [[NSMutableArray alloc]init];
+    _image = [[NSMutableArray alloc]init];
     _musicArray = [[NSMutableArray alloc]init];
     
     NSString *baseUrl = @"http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=cher&api_key=4335b079b4b2cc28a30a9395a8543f58&format=json";
@@ -74,25 +75,14 @@
             [self.musicArray addObject:musicModel];
             
             [self.music addObject:musicModel.trackName];
-            [self.artist addObject:musicModel.artist.name];
+            [self.artist addObject:musicModel.artist.name];            
             [self.image addObject:musicModel.image.text];
             
         }
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"updateFromServer" object:nil];
         
-    } else{
-        [_music addObject:@"Starboy"];
-        [_music addObject:@"One Kiss"];
-        [_music addObject:@"Habits"];
-        [_music addObject:@"The Less I Know The Better"];
-        
-        [_artist addObject:@"The Weeknd"];
-        [_artist addObject:@"Dua Lipa"];
-        [_artist addObject:@"Tove Lo"];
-        [_artist addObject:@"Tame Impala"];
     }
-    
 }
 
 @end
