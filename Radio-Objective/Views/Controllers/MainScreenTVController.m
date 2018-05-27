@@ -45,8 +45,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return _mainScreenViewModel.music.count;
+    if(_mainScreenViewModel.musicArray.count > 0){
+        return _mainScreenViewModel.musicArray.count;
+    }
+    return 0;
 }
 
 // Add the items
@@ -54,15 +56,17 @@
     
     MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
     
-    if(_mainScreenViewModel.music.count > 0){
+    if(_mainScreenViewModel.musicArray.count > 0){
+        MusicModel *musicSelected = _mainScreenViewModel.musicArray[indexPath.row];
         
-    
-        cell.lblTitle.text = _mainScreenViewModel.music[indexPath.row];
-        cell.lblDetail.text = _mainScreenViewModel.artist[indexPath.row];
-        NSString *stringUrl = _mainScreenViewModel.image[indexPath.row];
-
+        cell.lblTitle.text = musicSelected.artist.name;
+        
+        cell.lblDetail.text = musicSelected.trackName;
+        
+        NSString *stringUrl = musicSelected.image.text;
+        
         [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
-
+        
         [cell.imgView sd_setImageWithURL:[NSURL URLWithString:stringUrl]  placeholderImage:[UIImage imageNamed:@"image_small"]];
     }
     return cell;

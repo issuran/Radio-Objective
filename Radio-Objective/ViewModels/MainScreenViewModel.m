@@ -28,9 +28,6 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     
-    _music = [[NSMutableArray alloc]init];
-    _artist = [[NSMutableArray alloc]init];
-    _image = [[NSMutableArray alloc]init];
     _musicArray = [[NSMutableArray alloc]init];
     
     NSString *baseUrl = @"http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&artist=cher&api_key=4335b079b4b2cc28a30a9395a8543f58&format=json";
@@ -73,10 +70,6 @@
             musicModel = [musicModel initWithDictionary:music];
             
             [self.musicArray addObject:musicModel];
-            
-            [self.music addObject:musicModel.trackName];
-            [self.artist addObject:musicModel.artist.name];            
-            [self.image addObject:musicModel.image.text];
             
         }
         
