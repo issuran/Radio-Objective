@@ -27,8 +27,10 @@ Radio v.0.1
 
 - Design Pattern : MVVM
 
+- SDWebImage
+
 # Pendencies
-- Many...
+- Create another screen with more details
 
 # Author
 Tiago Oliveira
