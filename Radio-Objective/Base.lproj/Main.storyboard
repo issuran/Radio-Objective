@@ -256,7 +256,7 @@
         <!--Top Songs-->
         <scene sceneID="JQG-cO-I2G">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lkJ-7d-JR8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="lkJ-7d-JR8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Top Songs" image="songs" id="Qoh-Y9-rUR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jda-SS-gXS">

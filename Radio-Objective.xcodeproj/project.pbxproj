@@ -23,6 +23,8 @@
 		52EDA35720B2114E002F2566 /* TracksModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35620B2114E002F2566 /* TracksModel.m */; };
 		52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35C20B212B8002F2566 /* ImageModel.m */; };
 		52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35F20B213CF002F2566 /* ArtistModel.m */; };
+		52FEB3B620BCF14E007F3B3B /* ArtistsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3B520BCF14E007F3B3B /* ArtistsModel.m */; };
+		52FEB3B920BCF2DF007F3B3B /* ArtistsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3B820BCF2DF007F3B3B /* ArtistsListModel.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,10 @@
 		52EDA35C20B212B8002F2566 /* ImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		52EDA35E20B213CF002F2566 /* ArtistModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistModel.h; sourceTree = "<group>"; };
 		52EDA35F20B213CF002F2566 /* ArtistModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistModel.m; sourceTree = "<group>"; };
+		52FEB3B420BCF14E007F3B3B /* ArtistsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsModel.h; sourceTree = "<group>"; };
+		52FEB3B520BCF14E007F3B3B /* ArtistsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsModel.m; sourceTree = "<group>"; };
+		52FEB3B720BCF2DF007F3B3B /* ArtistsListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsListModel.h; sourceTree = "<group>"; };
+		52FEB3B820BCF2DF007F3B3B /* ArtistsListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsListModel.m; sourceTree = "<group>"; };
 		A4720EF0915830255FF1B74B /* Pods-Radio-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.release.xcconfig"; sourceTree = "<group>"; };
 		B146F432CA62846FF1571E14 /* Pods-Radio-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.debug.xcconfig"; sourceTree = "<group>"; };
 		F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Radio-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -142,6 +148,10 @@
 				52EDA35C20B212B8002F2566 /* ImageModel.m */,
 				52EDA35E20B213CF002F2566 /* ArtistModel.h */,
 				52EDA35F20B213CF002F2566 /* ArtistModel.m */,
+				52FEB3B420BCF14E007F3B3B /* ArtistsModel.h */,
+				52FEB3B520BCF14E007F3B3B /* ArtistsModel.m */,
+				52FEB3B720BCF2DF007F3B3B /* ArtistsListModel.h */,
+				52FEB3B820BCF2DF007F3B3B /* ArtistsListModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,8 +279,10 @@
 			files = (
 				52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */,
 				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
+				52FEB3B920BCF2DF007F3B3B /* ArtistsListModel.m in Sources */,
 				52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */,
 				52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */,
+				52FEB3B620BCF14E007F3B3B /* ArtistsModel.m in Sources */,
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,
 				521DF6C820AE5DC200F34575 /* LoginController.m in Sources */,
