@@ -122,7 +122,7 @@
             
         }
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateFromServer" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"updateArtistsFromServer" object:nil];
         
     }
 }

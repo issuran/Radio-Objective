@@ -22,8 +22,6 @@
     
     _mainScreenViewModel = [MainScreenViewModel new];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blueColor]];
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"updateFromServer" object:nil];
     
     // Uncomment the following line to preserve selection between presentations.

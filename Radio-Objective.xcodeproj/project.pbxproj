@@ -25,6 +25,8 @@
 		52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35F20B213CF002F2566 /* ArtistModel.m */; };
 		52FEB3B620BCF14E007F3B3B /* ArtistsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3B520BCF14E007F3B3B /* ArtistsModel.m */; };
 		52FEB3B920BCF2DF007F3B3B /* ArtistsListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3B820BCF2DF007F3B3B /* ArtistsListModel.m */; };
+		52FEB3BC20BCFA30007F3B3B /* TopArtistsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3BB20BCFA30007F3B3B /* TopArtistsCollectionViewController.m */; };
+		52FEB3BF20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3BE20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +63,10 @@
 		52FEB3B520BCF14E007F3B3B /* ArtistsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsModel.m; sourceTree = "<group>"; };
 		52FEB3B720BCF2DF007F3B3B /* ArtistsListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistsListModel.h; sourceTree = "<group>"; };
 		52FEB3B820BCF2DF007F3B3B /* ArtistsListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistsListModel.m; sourceTree = "<group>"; };
+		52FEB3BA20BCFA30007F3B3B /* TopArtistsCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopArtistsCollectionViewController.h; sourceTree = "<group>"; };
+		52FEB3BB20BCFA30007F3B3B /* TopArtistsCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopArtistsCollectionViewController.m; sourceTree = "<group>"; };
+		52FEB3BD20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopArtistsCollectionViewCell.h; sourceTree = "<group>"; };
+		52FEB3BE20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopArtistsCollectionViewCell.m; sourceTree = "<group>"; };
 		A4720EF0915830255FF1B74B /* Pods-Radio-Objective.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.release.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.release.xcconfig"; sourceTree = "<group>"; };
 		B146F432CA62846FF1571E14 /* Pods-Radio-Objective.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Radio-Objective.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Radio-Objective/Pods-Radio-Objective.debug.xcconfig"; sourceTree = "<group>"; };
 		F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Radio-Objective.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +138,10 @@
 				52E081C920B0E09C00EBA88D /* MainScreenTVController.m */,
 				52013E8B20B1D6BE009FD46C /* MainScreenTVCell.h */,
 				52013E8C20B1D6BE009FD46C /* MainScreenTVCell.m */,
+				52FEB3BA20BCFA30007F3B3B /* TopArtistsCollectionViewController.h */,
+				52FEB3BB20BCFA30007F3B3B /* TopArtistsCollectionViewController.m */,
+				52FEB3BD20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.h */,
+				52FEB3BE20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,6 +290,7 @@
 				52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */,
 				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
 				52FEB3B920BCF2DF007F3B3B /* ArtistsListModel.m in Sources */,
+				52FEB3BF20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m in Sources */,
 				52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */,
 				52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */,
 				52FEB3B620BCF14E007F3B3B /* ArtistsModel.m in Sources */,
@@ -290,6 +301,7 @@
 				52EDA35720B2114E002F2566 /* TracksModel.m in Sources */,
 				52EDA35320B20C8D002F2566 /* MusicModel.m in Sources */,
 				52013E8D20B1D6BE009FD46C /* MainScreenTVCell.m in Sources */,
+				52FEB3BC20BCFA30007F3B3B /* TopArtistsCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
