@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -219,21 +220,57 @@
             </objects>
             <point key="canvasLocation" x="2844" y="860"/>
         </scene>
-        <!--Top Artists-->
-        <scene sceneID="ge6-cK-s2s">
+        <!--Top Artists Collection View Controller-->
+        <scene sceneID="6q5-yd-Vuo">
             <objects>
-                <viewController id="VU6-K6-Dmv" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="giU-3i-xdU">
+                <collectionViewController id="Vh4-AA-XLE" customClass="TopArtistsCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Yze-j1-kqT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="lvk-9f-QqY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Top Artists" image="artists" id="dIV-Vf-efd"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dm5-EZ-qVW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SYm-Q8-arE">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCollection" id="Tqs-qE-U3g" customClass="TopArtistsCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-RH-9fI">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="top" secondItem="Tqs-qE-U3g" secondAttribute="topMargin" id="IrP-MT-Jti"/>
+                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="leading" secondItem="Tqs-qE-U3g" secondAttribute="leadingMargin" id="PVF-Ol-ESo"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="nQy-RH-9fI" secondAttribute="bottom" id="YkS-Vt-Uqp"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="nQy-RH-9fI" secondAttribute="trailing" id="amK-5T-vrA"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="artistName" destination="nQy-RH-9fI" id="c6u-al-P3h"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Vh4-AA-XLE" id="ITH-wt-Ufv"/>
+                            <outlet property="delegate" destination="Vh4-AA-XLE" id="2jX-qn-A4R"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="cBb-eU-tYn"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yxs-ge-e09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="1561"/>
+            <point key="canvasLocation" x="2844" y="1557.5712143928038"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="gxk-rU-g1P">
@@ -246,7 +283,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="lkJ-7d-JR8" kind="relationship" relationship="viewControllers" id="L36-YS-j0n"/>
-                        <segue destination="VU6-K6-Dmv" kind="relationship" relationship="viewControllers" id="jI0-IW-odp"/>
+                        <segue destination="AfT-gU-IkN" kind="relationship" relationship="viewControllers" id="jI0-IW-odp"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QB7-yK-hgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,7 +293,7 @@
         <!--Top Songs-->
         <scene sceneID="JQG-cO-I2G">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lkJ-7d-JR8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" id="lkJ-7d-JR8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Top Songs" image="songs" id="Qoh-Y9-rUR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jda-SS-gXS">
@@ -271,6 +308,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hkz-j3-seV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1844" y="860"/>
+        </scene>
+        <!--Top Artists-->
+        <scene sceneID="p6E-2H-oJ5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AfT-gU-IkN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Top Artists" image="artists" id="dIV-Vf-efd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qNy-gz-pAI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Vh4-AA-XLE" kind="relationship" relationship="rootViewController" id="cYd-tA-L4o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lRh-Yx-i9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="1557.5712143928038"/>
         </scene>
     </scenes>
     <resources>

@@ -30,12 +30,11 @@
         self.imageArray = [musicDictionary objectForKey:@"image"];
         if(self.imageArray != nil){
             
+            //0 - small, 1 - medium, 2 - large, 3 - extralarge, 4 - mega
             self.imageDict = (NSDictionary *) [self.imageArray objectAtIndex:0];
             
             if(self.imageDict != nil && self.imageArray.count > 0){
                 [self.image initWithDictionary:self.imageDict];
-//                self.image.text = [self.imageDict objectForKey:@"#text"];
-//                self.image.size = [self.imageDict objectForKey:@"size"];
             }
         }
     }
