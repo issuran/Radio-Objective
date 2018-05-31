@@ -31,12 +31,24 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    UIBarButtonItem *rightNavButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+    
+    self.navigationItem.rightBarButtonItem = rightNavButton;
+}
+
+- (void) logout {
+    if(_mainScreenViewModel.logout){
+        [self performSegueWithIdentifier:@"backToLogin" sender:self];
+    }
+}
+
+
 - (void) receiveNotification:(NSNotification *) notification{
     if([[notification name] isEqualToString:@"updateFromServer"]){
         [self.tableView reloadData];
     }
 }
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

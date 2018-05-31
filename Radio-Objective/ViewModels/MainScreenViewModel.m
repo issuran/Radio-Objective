@@ -13,6 +13,7 @@
 #import "MusicModel.h"
 #import "ArtistsListModel.h"
 #import "ArtistsModel.h"
+@import Firebase;
 
 @implementation MainScreenViewModel
 
@@ -125,6 +126,18 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:@"updateArtistsFromServer" object:nil];
         
     }
+}
+
+- (BOOL) logout{
+    
+    NSError *signOutError;
+    
+    BOOL status = [[FIRAuth auth] signOut:&signOutError];
+    if(!status){
+        NSLog(@"Error signing out : %@", signOutError);
+        return false;
+    }
+    return true;
 }
 
 @end
