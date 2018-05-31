@@ -19,5 +19,6 @@
 
 - (void) populateMusicsArray;
 - (void) populateArtistsArray;
+- (bool) logout;
 
 @end

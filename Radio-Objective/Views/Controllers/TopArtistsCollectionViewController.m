@@ -34,6 +34,18 @@ static NSString * const reuseIdentifier = @"cellCollection";
     
     // Do any additional setup after loading the view.
 }
+//
+//- (void)viewDidAppear:(BOOL)animated{
+//    UIBarButtonItem *rightNavButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
+//    
+//    self.navigationItem.rightBarButtonItem = rightNavButton;
+//}
+
+- (IBAction)logoutUser:(id)sender {
+    if(_mainScreenViewModel.logout){
+        [self performSegueWithIdentifier:@"backToLogin" sender:self];
+    }
+}
 
 - (void) receiveNotification:(NSNotification *) notification{
     if([[notification name] isEqualToString:@"updateArtistsFromServer"]){

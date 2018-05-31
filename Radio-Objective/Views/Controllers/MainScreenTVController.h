@@ -14,5 +14,6 @@
 @interface MainScreenTVController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) MainScreenViewModel *mainScreenViewModel;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
 @end
