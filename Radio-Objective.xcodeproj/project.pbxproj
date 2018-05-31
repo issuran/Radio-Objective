@@ -16,7 +16,6 @@
 		5263C66A20AE515A00145725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66920AE515A00145725 /* Assets.xcassets */; };
 		5263C66D20AE515A00145725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66B20AE515A00145725 /* LaunchScreen.storyboard */; };
 		5263C67020AE515A00145725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66F20AE515A00145725 /* main.m */; };
-		52DD636220BA04C800587289 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52DD636120BA04C800587289 /* GoogleService-Info.plist */; };
 		52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081BE20B0695C00EBA88D /* LoginViewModel.m */; };
 		52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081C920B0E09C00EBA88D /* MainScreenTVController.m */; };
 		52EDA35320B20C8D002F2566 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35220B20C8D002F2566 /* MusicModel.m */; };
@@ -46,7 +45,6 @@
 		5263C66C20AE515A00145725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5263C66E20AE515A00145725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5263C66F20AE515A00145725 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		52DD636120BA04C800587289 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52E081BD20B0695C00EBA88D /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		52E081BE20B0695C00EBA88D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		52E081C820B0E09C00EBA88D /* MainScreenTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenTVController.h; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		52E081B820B0672500EBA88D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52DD636120BA04C800587289 /* GoogleService-Info.plist */,
 				52EDA35220B20C8D002F2566 /* MusicModel.m */,
 				52EDA35420B2106E002F2566 /* MusicModel.h */,
 				52EDA35520B2114E002F2566 /* TracksModel.h */,
@@ -253,7 +250,6 @@
 			files = (
 				5263C66D20AE515A00145725 /* LaunchScreen.storyboard in Resources */,
 				521DF6C520AE5ADB00F34575 /* GoogleService-Info.plist in Resources */,
-				52DD636220BA04C800587289 /* GoogleService-Info.plist in Resources */,
 				5263C66A20AE515A00145725 /* Assets.xcassets in Resources */,
 				5263C66820AE515A00145725 /* Main.storyboard in Resources */,
 			);

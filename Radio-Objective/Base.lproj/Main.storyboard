@@ -229,35 +229,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SYm-Q8-arE">
-                            <size key="itemSize" width="100" height="100"/>
+                            <size key="itemSize" width="375" height="158"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCollection" id="Tqs-qE-U3g" customClass="TopArtistsCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="158"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-RH-9fI">
-                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQy-RH-9fI">
+                                            <rect key="frame" x="166" y="8" width="201" height="150"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artists" translatesAutoresizingMaskIntoConstraints="NO" id="mJa-su-3Sg">
+                                            <rect key="frame" x="8" y="8" width="150" height="150"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="2BM-Vx-Gdi"/>
+                                                <constraint firstAttribute="width" constant="150" id="hJi-HH-TIC"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="top" secondItem="Tqs-qE-U3g" secondAttribute="topMargin" id="IrP-MT-Jti"/>
-                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="leading" secondItem="Tqs-qE-U3g" secondAttribute="leadingMargin" id="PVF-Ol-ESo"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="nQy-RH-9fI" secondAttribute="bottom" id="YkS-Vt-Uqp"/>
+                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="top" secondItem="mJa-su-3Sg" secondAttribute="top" id="Hq3-f8-NQv"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="nQy-RH-9fI" secondAttribute="trailing" id="amK-5T-vrA"/>
+                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="bottom" secondItem="mJa-su-3Sg" secondAttribute="bottom" id="c6S-DQ-L7H"/>
+                                    <constraint firstItem="mJa-su-3Sg" firstAttribute="top" secondItem="Tqs-qE-U3g" secondAttribute="top" constant="8" id="dKf-f7-3wX"/>
+                                    <constraint firstItem="mJa-su-3Sg" firstAttribute="leading" secondItem="Tqs-qE-U3g" secondAttribute="leading" constant="8" id="kWW-SB-5CJ"/>
+                                    <constraint firstItem="nQy-RH-9fI" firstAttribute="leading" secondItem="mJa-su-3Sg" secondAttribute="trailing" constant="8" symbolic="YES" id="ywS-Cv-WuW"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="artistName" destination="nQy-RH-9fI" id="c6u-al-P3h"/>
+                                    <outlet property="imgArtistView" destination="mJa-su-3Sg" id="YEK-Xi-aZh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -267,6 +277,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="cBb-eU-tYn"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Yze-j1-kqT" id="bZF-EN-3fz"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yxs-ge-e09" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

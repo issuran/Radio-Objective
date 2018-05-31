@@ -11,6 +11,7 @@
 #import "ArtistsModel.h"
 
 @interface TopArtistsCollectionViewController ()
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -55,30 +56,36 @@ static NSString * const reuseIdentifier = @"cellCollection";
 }
 */
 
+// Amount of sections - I want `n` sections (rows)
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
-    return 1;
-}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    
     if (_mainScreenViewModel.artistArray.count > 0) {
         return _mainScreenViewModel.artistArray.count;
     };
-    
     return 0;
+}
+
+// Amount of items per section - each section gonna have 
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return 1;
+    
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     TopArtistsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    if(_mainScreenViewModel.musicArray.count > 0){
-        ArtistsModel *artistSelected = _mainScreenViewModel.artistArray[indexPath.row];
+    if(_mainScreenViewModel.artistArray.count > 0){
+        ArtistsModel *artistSelected = _mainScreenViewModel.artistArray[indexPath.section + indexPath.row];
     
+        NSString *stringUrl = artistSelected.image.text;
+        
+        [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        
         // Configure the cell
         cell.artistName.text = artistSelected.artistName;
+        
+        [cell.imgArtistView sd_setImageWithURL:[NSURL URLWithString:stringUrl]  placeholderImage:[UIImage imageNamed:@"artists"]];
     }
     
     return cell;
