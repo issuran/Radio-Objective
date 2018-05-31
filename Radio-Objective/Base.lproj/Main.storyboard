@@ -267,6 +267,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="artistName" destination="nQy-RH-9fI" id="c6u-al-P3h"/>
+                                    <outlet property="imgArtistView" destination="mJa-su-3Sg" id="YEK-Xi-aZh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

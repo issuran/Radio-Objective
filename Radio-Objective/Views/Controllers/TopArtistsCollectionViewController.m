@@ -76,12 +76,16 @@ static NSString * const reuseIdentifier = @"cellCollection";
     TopArtistsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     if(_mainScreenViewModel.artistArray.count > 0){
-        int section =  indexPath.section;
-        int row = indexPath.row;
         ArtistsModel *artistSelected = _mainScreenViewModel.artistArray[indexPath.section + indexPath.row];
     
+        NSString *stringUrl = artistSelected.image.text;
+        
+        [stringUrl stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]];
+        
         // Configure the cell
         cell.artistName.text = artistSelected.artistName;
+        
+        [cell.imgArtistView sd_setImageWithURL:[NSURL URLWithString:stringUrl]  placeholderImage:[UIImage imageNamed:@"artists"]];
     }
     
     return cell;
