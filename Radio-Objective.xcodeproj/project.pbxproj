@@ -16,6 +16,10 @@
 		5263C66A20AE515A00145725 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66920AE515A00145725 /* Assets.xcassets */; };
 		5263C66D20AE515A00145725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5263C66B20AE515A00145725 /* LaunchScreen.storyboard */; };
 		5263C67020AE515A00145725 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5263C66F20AE515A00145725 /* main.m */; };
+		529C291420C0E12700B26CB8 /* TopSongsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C291320C0E12700B26CB8 /* TopSongsTests.m */; };
+		529C291620C0E13A00B26CB8 /* LoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C291520C0E13A00B26CB8 /* LoginTests.m */; };
+		529C291A20C0EB2C00B26CB8 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C291920C0EB2C00B26CB8 /* APIService.m */; };
+		529C291E20C0EBFD00B26CB8 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 529C291D20C0EBFD00B26CB8 /* Constants.m */; };
 		52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081BE20B0695C00EBA88D /* LoginViewModel.m */; };
 		52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E081C920B0E09C00EBA88D /* MainScreenTVController.m */; };
 		52EDA35320B20C8D002F2566 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EDA35220B20C8D002F2566 /* MusicModel.m */; };
@@ -28,6 +32,16 @@
 		52FEB3BF20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FEB3BE20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m */; };
 		9D8A5B81D2D79B7A1ED32495 /* libPods-Radio-Objective.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F716CD437FF0A1966F52E999 /* libPods-Radio-Objective.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		529C290E20C0DC9700B26CB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5263C65520AE515900145725 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5263C65C20AE515900145725;
+			remoteInfo = "Radio-Objective";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		52013E8820B1C457009FD46C /* MainScreenViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewModel.h; sourceTree = "<group>"; };
@@ -45,6 +59,14 @@
 		5263C66C20AE515A00145725 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5263C66E20AE515A00145725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5263C66F20AE515A00145725 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		529C290920C0DC9700B26CB8 /* Radio-ObjectiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Radio-ObjectiveTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		529C290D20C0DC9700B26CB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		529C291320C0E12700B26CB8 /* TopSongsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopSongsTests.m; sourceTree = "<group>"; };
+		529C291520C0E13A00B26CB8 /* LoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginTests.m; sourceTree = "<group>"; };
+		529C291820C0EB2C00B26CB8 /* APIService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
+		529C291920C0EB2C00B26CB8 /* APIService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
+		529C291C20C0EBFD00B26CB8 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		529C291D20C0EBFD00B26CB8 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		52E081BD20B0695C00EBA88D /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		52E081BE20B0695C00EBA88D /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
 		52E081C820B0E09C00EBA88D /* MainScreenTVController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenTVController.h; sourceTree = "<group>"; };
@@ -79,6 +101,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		529C290620C0DC9700B26CB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5263C65F20AE515A00145725 /* Radio-Objective */,
+				529C290A20C0DC9700B26CB8 /* Radio-ObjectiveTests */,
 				5263C65E20AE515A00145725 /* Products */,
 				51A128FB862A8B155702079E /* Pods */,
 				E6886714E1BE8B628229DAA6 /* Frameworks */,
@@ -105,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				5263C65D20AE515A00145725 /* Radio-Objective.app */,
+				529C290920C0DC9700B26CB8 /* Radio-ObjectiveTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +143,8 @@
 		5263C65F20AE515A00145725 /* Radio-Objective */ = {
 			isa = PBXGroup;
 			children = (
+				529C291B20C0EBEF00B26CB8 /* Utils */,
+				529C291720C0EADE00B26CB8 /* Network */,
 				52E081C020B069CB00EBA88D /* Views */,
 				52E081BC20B0694900EBA88D /* ViewModels */,
 				52E081B820B0672500EBA88D /* Models */,
@@ -125,6 +158,34 @@
 				5263C66F20AE515A00145725 /* main.m */,
 			);
 			path = "Radio-Objective";
+			sourceTree = "<group>";
+		};
+		529C290A20C0DC9700B26CB8 /* Radio-ObjectiveTests */ = {
+			isa = PBXGroup;
+			children = (
+				529C290D20C0DC9700B26CB8 /* Info.plist */,
+				529C291320C0E12700B26CB8 /* TopSongsTests.m */,
+				529C291520C0E13A00B26CB8 /* LoginTests.m */,
+			);
+			path = "Radio-ObjectiveTests";
+			sourceTree = "<group>";
+		};
+		529C291720C0EADE00B26CB8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				529C291820C0EB2C00B26CB8 /* APIService.h */,
+				529C291920C0EB2C00B26CB8 /* APIService.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		529C291B20C0EBEF00B26CB8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				529C291C20C0EBFD00B26CB8 /* Constants.h */,
+				529C291D20C0EBFD00B26CB8 /* Constants.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		52E081B620B066F000EBA88D /* Controllers */ = {
@@ -211,6 +272,24 @@
 			productReference = 5263C65D20AE515A00145725 /* Radio-Objective.app */;
 			productType = "com.apple.product-type.application";
 		};
+		529C290820C0DC9700B26CB8 /* Radio-ObjectiveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 529C291220C0DC9700B26CB8 /* Build configuration list for PBXNativeTarget "Radio-ObjectiveTests" */;
+			buildPhases = (
+				529C290520C0DC9700B26CB8 /* Sources */,
+				529C290620C0DC9700B26CB8 /* Frameworks */,
+				529C290720C0DC9700B26CB8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				529C290F20C0DC9700B26CB8 /* PBXTargetDependency */,
+			);
+			name = "Radio-ObjectiveTests";
+			productName = "Radio-ObjectiveTests";
+			productReference = 529C290920C0DC9700B26CB8 /* Radio-ObjectiveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +301,10 @@
 				TargetAttributes = {
 					5263C65C20AE515900145725 = {
 						CreatedOnToolsVersion = 9.3;
+					};
+					529C290820C0DC9700B26CB8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5263C65C20AE515900145725;
 					};
 				};
 			};
@@ -239,6 +322,7 @@
 			projectRoot = "";
 			targets = (
 				5263C65C20AE515900145725 /* Radio-Objective */,
+				529C290820C0DC9700B26CB8 /* Radio-ObjectiveTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +336,13 @@
 				521DF6C520AE5ADB00F34575 /* GoogleService-Info.plist in Resources */,
 				5263C66A20AE515A00145725 /* Assets.xcassets in Resources */,
 				5263C66820AE515A00145725 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		529C290720C0DC9700B26CB8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,11 +376,13 @@
 			files = (
 				52E081CA20B0E09C00EBA88D /* MainScreenTVController.m in Sources */,
 				52E081BF20B0695C00EBA88D /* LoginViewModel.m in Sources */,
+				529C291A20C0EB2C00B26CB8 /* APIService.m in Sources */,
 				52FEB3B920BCF2DF007F3B3B /* ArtistsListModel.m in Sources */,
 				52FEB3BF20BCFC4D007F3B3B /* TopArtistsCollectionViewCell.m in Sources */,
 				52EDA36020B213CF002F2566 /* ArtistModel.m in Sources */,
 				52EDA35D20B212B8002F2566 /* ImageModel.m in Sources */,
 				52FEB3B620BCF14E007F3B3B /* ArtistsModel.m in Sources */,
+				529C291E20C0EBFD00B26CB8 /* Constants.m in Sources */,
 				5263C67020AE515A00145725 /* main.m in Sources */,
 				5263C66220AE515A00145725 /* AppDelegate.m in Sources */,
 				521DF6C820AE5DC200F34575 /* LoginController.m in Sources */,
@@ -301,7 +394,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		529C290520C0DC9700B26CB8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				529C291420C0E12700B26CB8 /* TopSongsTests.m in Sources */,
+				529C291620C0E13A00B26CB8 /* LoginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		529C290F20C0DC9700B26CB8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5263C65C20AE515900145725 /* Radio-Objective */;
+			targetProxy = 529C290E20C0DC9700B26CB8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5263C66620AE515A00145725 /* Main.storyboard */ = {
@@ -469,6 +579,44 @@
 			};
 			name = Release;
 		};
+		529C291020C0DC9700B26CB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NCP4ZF9F8;
+				INFOPLIST_FILE = "Radio-ObjectiveTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.optimize7.Radio-ObjectiveTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radio-Objective.app/Radio-Objective";
+			};
+			name = Debug;
+		};
+		529C291120C0DC9700B26CB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4NCP4ZF9F8;
+				INFOPLIST_FILE = "Radio-ObjectiveTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.optimize7.Radio-ObjectiveTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Radio-Objective.app/Radio-Objective";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +634,15 @@
 			buildConfigurations = (
 				5263C67420AE515A00145725 /* Debug */,
 				5263C67520AE515A00145725 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		529C291220C0DC9700B26CB8 /* Build configuration list for PBXNativeTarget "Radio-ObjectiveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				529C291020C0DC9700B26CB8 /* Debug */,
+				529C291120C0DC9700B26CB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
