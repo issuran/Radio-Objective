@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "TracksModel.h"
 #import "ArtistsListModel.h"
+#import "Constants.h"
 
 @interface MainScreenViewModel : NSObject
 

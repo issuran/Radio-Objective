@@ -34,17 +34,13 @@
     _musicArray = [[NSMutableArray alloc]init];
     _artistArray = [[NSMutableArray alloc]init];
     
-    NSString *baseUrl = @"http://ws.audioscrobbler.com/2.0/";
+    NSString *baseUrl = BASE_URL;
     
     // Get top songs
-    [params setObject:@"chart.gettoptracks" forKey:@"method"];
+    [params setObject:METHOD_TOP_TRACKS forKey:METHOD];
     
-    // Get artist details
-//    [params setObject:@"artist.getInfo" forKey:@"method"];
-//    [params setObject:@"track.getInfo" forKey:@"mbid"];
-    
-    [params setObject:@"4335b079b4b2cc28a30a9395a8543f58" forKey:@"api_key"];
-    [params setObject:@"json" forKey:@"format"];
+    [params setObject:API_KEY_VALUE forKey:API_KEY];
+    [params setObject:FORMAT_VALUE forKey:FORMAT];
     
     
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -71,7 +67,7 @@
     
     
     // Get top artists
-    [params setObject:@"chart.gettopartists" forKey:@"method"];
+    [params setObject:METHOD_TOP_ARTISTS forKey:METHOD];
 
     [manager GET:baseUrl parameters:params progress:nil
          success:^(NSURLSessionTask *task, id responseObject)
