@@ -28,62 +28,16 @@
 // As Views holds reference to the ViewModel, so makes sense initialize our View, given a ViewModel
 - (void) initialize {
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+    self.service = [[APIService alloc]init];
     
     _musicArray = [[NSMutableArray alloc]init];
     _artistArray = [[NSMutableArray alloc]init];
     
-    NSString *baseUrl = BASE_URL;
+    // REQUEST TO POPULATE MUSICS
+    [self callTopMusics];
     
-    // Get top songs
-    [params setObject:METHOD_TOP_TRACKS forKey:METHOD];
-    
-    [params setObject:API_KEY_VALUE forKey:API_KEY];
-    [params setObject:FORMAT_VALUE forKey:FORMAT];
-    
-    
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", nil];
-    
-    // Top Songs request
-    [manager GET:baseUrl parameters:params progress:nil
-        success:^(NSURLSessionTask *task, id responseObject)
-        {
-            NSDictionary *result = (NSDictionary *) responseObject;
-            
-            TracksModel *tracksModel = [TracksModel new];
-            self.tracksModel = [tracksModel initWithDictionary:result];
-            
-            [self populateMusicsArray];
-            
-        }
-        failure:^(NSURLSessionTask *task, NSError *error)
-        {
-            NSLog(@"Error: %@", error.localizedFailureReason);
-        }];
-    
-    // Top artists request
-    
-    
-    // Get top artists
-    [params setObject:METHOD_TOP_ARTISTS forKey:METHOD];
-
-    [manager GET:baseUrl parameters:params progress:nil
-         success:^(NSURLSessionTask *task, id responseObject)
-     {
-         NSDictionary *result = (NSDictionary *) responseObject;
-         
-         ArtistsListModel *artistsListModel = [ArtistsListModel new];
-         self.artistsListModel = [artistsListModel initWithDictionary:result];
-         
-         [self populateArtistsArray];
-         
-     }
-         failure:^(NSURLSessionTask *task, NSError *error)
-     {
-         NSLog(@"Error: %@", error.localizedFailureReason);
-     }];
+    // REQUEST TO POPULATE ARTISTS
+    [self callTopArtists];
 }
 
 - (void) populateMusicsArray {
@@ -134,6 +88,46 @@
         return false;
     }
     return true;
+}
+
+- (void) callTopMusics{
+    
+    [self.service downloadTopSongs];
+    
+}
+
+- (BOOL) processTopMusicCallback{
+    
+    NSDictionary *result = (NSDictionary *) [self.service dictResult];
+    
+    if(result == nil){
+        return NO;
+    }
+    
+    TracksModel *tracksModel = [TracksModel new];
+    self.tracksModel = [tracksModel initWithDictionary:result];
+    
+    return YES;
+}
+
+- (void) callTopArtists{
+    
+    [self.service downloadTopArtists];
+    
+}
+
+- (BOOL) processTopArtistsCallback{
+    
+    NSDictionary *result = (NSDictionary *) [self.service dictResult];
+    
+    if(result == nil){
+        return NO;
+    }
+    
+    ArtistsListModel *artistsListModel = [ArtistsListModel new];
+    self.artistsListModel = [artistsListModel initWithDictionary:result];
+    
+    return YES;
 }
 
 @end

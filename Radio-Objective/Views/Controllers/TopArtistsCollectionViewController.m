@@ -26,6 +26,8 @@ static NSString * const reuseIdentifier = @"cellCollection";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"updateArtistsFromServer" object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callbackDownloadNotification:) name:@"downloadTopArtistsFromServer" object:nil];
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -50,6 +52,14 @@ static NSString * const reuseIdentifier = @"cellCollection";
 - (void) receiveNotification:(NSNotification *) notification{
     if([[notification name] isEqualToString:@"updateArtistsFromServer"]){
         [self.collectionView reloadData];
+    }
+}
+
+- (void) callbackDownloadNotification:(NSNotification *) notification{
+    if([[notification name] isEqualToString:@"downloadTopArtistsFromServer"]){
+        if([self.mainScreenViewModel processTopArtistsCallback]){
+            [self.mainScreenViewModel populateArtistsArray];
+        }
     }
 }
 
