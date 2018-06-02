@@ -69,7 +69,7 @@
                          completion:^(FIRAuthDataResult * _Nullable authResult, NSError * _Nullable error) {
                              if(error == nil){
                                  [self signUserIn: YES];
-                                 NSLog(@"Sign In - Sucess");
+                                 NSLog(@"Sign In - Success");
                                  dispatch_semaphore_signal(sem);
                              } else{
                                  NSLog(@"Error: %@", error.localizedDescription);

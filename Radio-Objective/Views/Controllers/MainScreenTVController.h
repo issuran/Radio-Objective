@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) MainScreenViewModel *mainScreenViewModel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

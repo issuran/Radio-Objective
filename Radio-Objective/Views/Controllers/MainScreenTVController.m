@@ -10,8 +10,6 @@
 
 @interface MainScreenTVController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @end
 
 @implementation MainScreenTVController
@@ -23,6 +21,8 @@
     _mainScreenViewModel = [MainScreenViewModel new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"updateFromServer" object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(callbackDownloadNotification:) name:@"downloadTopMusicsFromServer" object:nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -49,6 +49,17 @@
         [self.tableView reloadData];
     }
 }
+
+
+- (void) callbackDownloadNotification:(NSNotification *) notification{
+    if([[notification name] isEqualToString:@"downloadTopMusicsFromServer"]){
+        if([self.mainScreenViewModel processTopMusicCallback]){
+            [self.mainScreenViewModel populateMusicsArray];
+        }
+    }
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

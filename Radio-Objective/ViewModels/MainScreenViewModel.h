@@ -10,6 +10,7 @@
 #import "TracksModel.h"
 #import "ArtistsListModel.h"
 #import "Constants.h"
+#import "APIService.h"
 
 @interface MainScreenViewModel : NSObject
 
@@ -17,9 +18,14 @@
 @property (strong, nonatomic) ArtistsListModel *artistsListModel;
 @property (strong, nonatomic) NSMutableArray *musicArray;
 @property (strong, nonatomic) NSMutableArray *artistArray;
+@property (strong, nonatomic) APIService *service;
 
 - (void) populateMusicsArray;
 - (void) populateArtistsArray;
 - (bool) logout;
+- (void) callTopMusics;
+- (BOOL) processTopMusicCallback;
+- (void) callTopArtists;
+- (BOOL) processTopArtistsCallback;
 
 @end

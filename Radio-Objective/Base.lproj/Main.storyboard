@@ -224,7 +224,7 @@
                     <navigationItem key="navigationItem" id="0Ga-zf-iET"/>
                     <connections>
                         <outlet property="navigationItem" destination="0Ga-zf-iET" id="Xa7-IA-EyH"/>
-                        <outlet property="tableView" destination="qth-Qj-Zn8" id="Zg3-to-yTP"/>
+                        <outlet property="tableView" destination="qth-Qj-Zn8" id="LPh-Mf-bKH"/>
                         <segue destination="ads-6b-nME" kind="showDetail" identifier="backToLogin" id="9eJ-pR-XoQ"/>
                     </connections>
                 </tableViewController>
@@ -368,6 +368,6 @@
         <image name="songs" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="l9t-Bz-Gih"/>
+        <segue reference="9eJ-pR-XoQ"/>
     </inferredMetricsTieBreakers>
 </document>

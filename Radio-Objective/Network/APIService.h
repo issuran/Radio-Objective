@@ -7,10 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AFNetworking.h>
+#import <objc/runtime.h>
+#import "Constants.h"
 
 @interface APIService : NSObject
 
-- (BOOL) downloadTopSongs : (NSString *)username forPassword:(NSString *)password;
-- (BOOL) downloadTopArtists : (NSString *)username forPassword:(NSString *)password;
+@property (retain, nonatomic) NSDictionary *dictResult;
+@property (retain, nonatomic) AFHTTPSessionManager *manager;
+@property (retain, nonatomic) NSString *baseUrl;
+
+- (void) downloadTopSongs;
+- (void) downloadTopArtists;
+
+- (NSMutableDictionary *) getParametersToRequestTopMusics : (NSMutableDictionary *) params;
+- (NSMutableDictionary *) getParametersToRequestTopArtists : (NSMutableDictionary *) params;
 
 @end
