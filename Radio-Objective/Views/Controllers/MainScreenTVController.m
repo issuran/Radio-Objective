@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _mainScreenViewModel = [MainScreenViewModel new];
+    _topMusicsViewModel = [TopMusicsViewModel new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"updateFromServer" object:nil];
     
@@ -38,7 +38,7 @@
 }
 
 - (void) logout {
-    if(_mainScreenViewModel.logout){
+    if(_topMusicsViewModel.logout){
         [self performSegueWithIdentifier:@"backToLogin" sender:self];
     }
 }
@@ -53,8 +53,8 @@
 
 - (void) callbackDownloadNotification:(NSNotification *) notification{
     if([[notification name] isEqualToString:@"downloadTopMusicsFromServer"]){
-        if([self.mainScreenViewModel processTopMusicCallback]){
-            [self.mainScreenViewModel populateMusicsArray];
+        if([self.topMusicsViewModel processTopMusicCallback]){
+            [self.topMusicsViewModel populateMusicsArray];
         }
     }
 }
@@ -68,8 +68,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if(_mainScreenViewModel.musicArray.count > 0){
-        return _mainScreenViewModel.musicArray.count;
+    if(_topMusicsViewModel.musicArray.count > 0){
+        return _topMusicsViewModel.musicArray.count;
     }
     return 0;
 }
@@ -79,8 +79,8 @@
     
     MainScreenTVCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellTable"];
     
-    if(_mainScreenViewModel.musicArray.count > 0){
-        MusicModel *musicSelected = _mainScreenViewModel.musicArray[indexPath.row];
+    if(_topMusicsViewModel.musicArray.count > 0){
+        MusicModel *musicSelected = _topMusicsViewModel.musicArray[indexPath.row];
         
         cell.lblTitle.text = musicSelected.artist.name;
         

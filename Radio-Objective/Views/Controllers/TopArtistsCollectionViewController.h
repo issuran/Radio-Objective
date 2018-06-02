@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainScreenViewModel.h"
+#import "TopArtistsViewModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface TopArtistsCollectionViewController : UICollectionViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
-@property (strong, nonatomic) MainScreenViewModel *mainScreenViewModel;
+@property (strong, nonatomic) TopArtistsViewModel *topArtistsViewModel;
+
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

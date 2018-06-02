@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "MainScreenViewModel.h"
+#import "TopMusicsViewModel.h"
 
 @interface TopSongsTests : XCTestCase
 
-@property MainScreenViewModel *mainScreenViewModel;
+@property TopMusicsViewModel *topMusicsViewModel;
 
 @end
 
@@ -20,12 +20,12 @@
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    _mainScreenViewModel = [[MainScreenViewModel alloc]init];
+    _topMusicsViewModel = [[TopMusicsViewModel alloc]init];
 }
 
 - (void) testArraysNotNil {
-    XCTAssertNotNil(_mainScreenViewModel.musicArray);
-    XCTAssertNotNil(_mainScreenViewModel.artistArray);
+    XCTAssertNotNil(_topMusicsViewModel.musicArray);
+    XCTAssertNotNil(_topMusicsViewModel.artistArray);
 }
 
 - (void)tearDown {
