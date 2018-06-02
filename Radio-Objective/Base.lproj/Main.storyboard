@@ -296,7 +296,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="Yze-j1-kqT" id="bZF-EN-3fz"/>
+                        <outlet property="collectionView" destination="Yze-j1-kqT" id="Ag2-qY-ITl"/>
                         <segue destination="ads-6b-nME" kind="showDetail" identifier="backToLogin" id="l9t-Bz-Gih"/>
                     </connections>
                 </collectionViewController>
@@ -368,6 +368,6 @@
         <image name="songs" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9eJ-pR-XoQ"/>
+        <segue reference="l9t-Bz-Gih"/>
     </inferredMetricsTieBreakers>
 </document>

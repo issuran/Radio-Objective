@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainScreenViewModel.h"
+#import "TopMusicsViewModel.h"
 #import "MainScreenTVCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MainScreenTVController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic) MainScreenViewModel *mainScreenViewModel;
+@property (strong, nonatomic) TopMusicsViewModel *topMusicsViewModel;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationItem;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

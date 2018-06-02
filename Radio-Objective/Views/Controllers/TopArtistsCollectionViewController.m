@@ -11,7 +11,6 @@
 #import "ArtistsModel.h"
 
 @interface TopArtistsCollectionViewController ()
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 
@@ -22,7 +21,7 @@ static NSString * const reuseIdentifier = @"cellCollection";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _mainScreenViewModel = [MainScreenViewModel new];
+    _topArtistsViewModel = [TopArtistsViewModel new];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotification:) name:@"updateArtistsFromServer" object:nil];
     
@@ -36,15 +35,9 @@ static NSString * const reuseIdentifier = @"cellCollection";
     
     // Do any additional setup after loading the view.
 }
-//
-//- (void)viewDidAppear:(BOOL)animated{
-//    UIBarButtonItem *rightNavButton = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logout)];
-//    
-//    self.navigationItem.rightBarButtonItem = rightNavButton;
-//}
 
 - (IBAction)logoutUser:(id)sender {
-    if(_mainScreenViewModel.logout){
+    if(_topArtistsViewModel.logout){
         [self performSegueWithIdentifier:@"backToLogin" sender:self];
     }
 }
@@ -57,8 +50,8 @@ static NSString * const reuseIdentifier = @"cellCollection";
 
 - (void) callbackDownloadNotification:(NSNotification *) notification{
     if([[notification name] isEqualToString:@"downloadTopArtistsFromServer"]){
-        if([self.mainScreenViewModel processTopArtistsCallback]){
-            [self.mainScreenViewModel populateArtistsArray];
+        if([self.topArtistsViewModel processTopArtistsCallback]){
+            [self.topArtistsViewModel populateArtistsArray];
         }
     }
 }
@@ -80,8 +73,8 @@ static NSString * const reuseIdentifier = @"cellCollection";
 
 // Amount of sections - I want `n` sections (rows)
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    if (_mainScreenViewModel.artistArray.count > 0) {
-        return _mainScreenViewModel.artistArray.count;
+    if (_topArtistsViewModel.artistArray.count > 0) {
+        return _topArtistsViewModel.artistArray.count;
     };
     return 0;
 }
@@ -97,8 +90,8 @@ static NSString * const reuseIdentifier = @"cellCollection";
     
     TopArtistsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    if(_mainScreenViewModel.artistArray.count > 0){
-        ArtistsModel *artistSelected = _mainScreenViewModel.artistArray[indexPath.section + indexPath.row];
+    if(_topArtistsViewModel.artistArray.count > 0){
+        ArtistsModel *artistSelected = _topArtistsViewModel.artistArray[indexPath.section + indexPath.row];
     
         NSString *stringUrl = artistSelected.image.text;
         
