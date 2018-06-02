@@ -1,9 +1,9 @@
 # Radio-Objective :radio:
-Display top trends Artists and Music
+Display top trends Artists and Songs
 
 # What is it?
 
-Radio is a Objective-C based code for practicing and of course, display what is hot in radio =)
+Radio is a Objective-C based code for practicing and of course, display what is hot on the radio =)
 
 # The Road So Far
 Radio v.1.0
